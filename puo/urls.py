@@ -4,6 +4,6 @@ from .views import ProjectSubmissionViewSet, PostViewSet, EndorseViewSet
 
 router = DefaultRouter()
 router.register(r'project_submissions', ProjectSubmissionViewSet, basename='project_submission')
-router.register(r'posts', AuthorViewSet, basename='post')
+router.register(r'posts', PostViewSet, basename='post')
 router.register(r'endorsements', EndorseViewSet, basename='endorsement')
 urlpatterns = router.urls
