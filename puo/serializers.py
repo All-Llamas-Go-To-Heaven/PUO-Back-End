@@ -7,7 +7,7 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('name', 'comment', 'created_at', 'updated_at', 'project_name')
+        fields = ('project', 'name', 'comment', 'created_at', 'updated_at', 'project_name')
 
 class EndorseSerializer(serializers.ModelSerializer):
     project_name = serializers.ReadOnlyField(source='project.name', read_only=True)
@@ -28,4 +28,4 @@ class ProjectSubmissionSerializer(serializers.ModelSerializer):
 
     class Meta: 
         model = ProjectSubmission
-        fields = ('name', 'project_name', 'project_description', 'project_url', 'project_photo', 'portfolio_url', 'posts', 'endorsements')
+        fields = ('id', 'name', 'project_name', 'project_description', 'project_url', 'project_photo', 'portfolio_url', 'posts', 'endorsements')
