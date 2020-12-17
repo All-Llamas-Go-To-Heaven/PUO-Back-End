@@ -5,6 +5,7 @@ from django.db import models
 
 class ProjectSubmission(models.Model):
     name = models.CharField(max_length=100)
+    language_used = models.CharField(max_length=100)
     project_name = models.CharField(max_length=100)
     project_description = models.CharField(max_length=500)
     project_url = models.TextField(blank=True)
