@@ -129,6 +129,10 @@ STATIC_URL = '/static/'
 
 AUTH_USER_MODEL ='users.User'
 
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = '/Users/kosp/desktop/sei/put-us-on/puo-back-end/media'
+
 DJOSER = {
     'LOGIN_FIELD': 'email',
     'USER_CREATE_PASSWORD_RETYPE': True,

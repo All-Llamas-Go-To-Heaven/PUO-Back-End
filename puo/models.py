@@ -9,7 +9,7 @@ class ProjectSubmission(models.Model):
     project_name = models.CharField(max_length=100)
     project_description = models.CharField(max_length=500)
     project_url = models.TextField(blank=True)
-    project_photo = models.ImageField(upload_to='images/', default='images/default.jpg')
+    project_photo = models.ImageField(upload_to='media/images/', default='media/images/default.jpg', blank=True)
     portfolio_url = models.TextField(blank=True)
 
     def __str__(self):
